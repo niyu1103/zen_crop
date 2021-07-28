@@ -1,0 +1,210 @@
+/* ------------------------------------------------------ */
+/*
+ * Section
+ */
+
+.sec {
+  padding: 120px 0 96px;
+  .wrap-sec-ttl {
+    text-align: left;
+    width: $container-width;
+    margin: 0 auto 64px;
+    padding: 0 16px 16px;
+    position: relative;
+    &:before {
+      content: "";
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+      border-top: 1px solid $black;
+      box-sizing: border-box;
+      transition: all 0.5s 0.5s ease-in-out;
+    }
+    .sec-ttl-en {
+      font-family: $type-title2-en;
+      font-size: 6rem;
+      font-weight: 400;
+      transition: all 0.3s ease;
+      line-height: 1;
+      letter-spacing: 0;
+      margin: 0 0 8px 0;
+      margin-bottom: 0;
+      text-indent: -4px;
+      span {
+        opacity: 0;
+        transition: all 0.3s 0.5s ease-in-out;
+        display: inline-block; /* これがないとspanは移動しない */
+        padding-right: 0.6rem;
+        &:nth-of-type(odd) {
+          transform: translateY(40px);
+        }
+        &:nth-of-type(even) {
+          transform: translateY(-40px);
+        }
+        @for $i from 1 through 30 {
+          &:nth-child(#{$i}) {
+            transition-delay: #{$i * 0.1}s;
+          }
+        }
+      }
+    }
+    .sec-ttl-jp {
+      font-family: $type-title-jp;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 1.8;
+    }
+  }
+  .wrap-sec-ttl.show {
+    &:before {
+      width: 80px;
+    }
+    .sec-ttl-en {
+      span {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .sec-ttl-jp {
+      transition-delay: 1s;
+    }
+  }
+  .wrap-sec-ttl.no-sc-f {
+    &:before {
+      width: 80px;
+    }
+    .sec-ttl-en {
+      span {
+        opacity: 1;
+      }
+    }
+  }
+  .sec-container,
+  .content-container {
+    width: $container-width;
+    margin: 0 auto 64px;
+    padding: 0 16px;
+  }
+}
+// English
+.en {
+  .sec {
+    .wrap-sec-ttl {
+      .sec-ttl-jp {
+        // display: none;
+      }
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 1024px) {
+  .sec {
+    padding: 64px 0 40px;
+    .wrap-sec-ttl {
+      width: 100%;
+      margin: 0 0 32px;
+      padding: 0 16px 16px;
+      position: relative;
+      .sec-ttl-en {
+        font-size: 3.2rem;
+        font-weight: 400;
+        line-height: 1;
+        margin: 0 0 4px 0;
+        text-indent: 0;
+      }
+      .sec-ttl-jp {
+        font-size: 1.4rem;
+        line-height: 1.8;
+      }
+    }
+    .wrap-sec-ttl.show {
+      &:before {
+        width: 64px;
+      }
+      .sec-ttl-en {
+        span {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .sec-ttl-jp {
+        transition-delay: 1s;
+      }
+    }
+    .wrap-sec-ttl.no-sc-f {
+      &:before {
+        width: 80px;
+      }
+      .sec-ttl-en {
+        span {
+          opacity: 1;
+        }
+      }
+    }
+    .sec-container,
+    .content-container {
+      width: 100%;
+      margin: 0 0 0;
+      padding: 0 16px;
+    }
+  }
+}
+
+// SP
+@media (max-width: 767px) {
+  .sec {
+    padding: 64px 0 40px;
+    .wrap-sec-ttl {
+      text-align: left;
+      width: 100%;
+      margin: 0 0 32px;
+      padding: 0 16px 16px;
+      position: relative;
+      // .sec-ttl-en {
+      //   font-size: 3.2rem;
+      //   font-weight: 400;
+      //   transition: all 0.3s ease;
+      //   line-height: 1;
+      //   margin: 0 0 4px 0;
+      //   text-indent: 0;
+      // }
+      // .sec-ttl-jp {
+      //   font-size: 1.4rem;
+      //   line-height: 1.8;
+      // }
+      // }
+      // .wrap-sec-ttl.show {
+      //   &:before {
+      //     width: 64px;
+      //   }
+      //   .sec-ttl-en {
+      //     span {
+      //       opacity: 1;
+      //       transform: translateY(0);
+      //     }
+      //   }
+      //   .sec-ttl-jp {
+      //     transition-delay: 1s;
+      //   }
+      // }
+      // .wrap-sec-ttl.no-sc-f {
+      //   &:before {
+      //     width: 80px;
+      //   }
+      //   .sec-ttl-en {
+      //     span {
+      //       opacity: 1;
+      //     }
+      //   }
+      // }
+      // .sec-container,
+      // .content-container {
+      //   width: 100%;
+      //   margin: 0 0 0;
+      //   padding: 0 16px;
+      // }
+    }
+  }
+}

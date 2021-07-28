@@ -1,0 +1,170 @@
+/* ------------------------------------------------------ */
+/**
+*  Contact Us
+*/
+
+.contact-us {
+  .sec-container {
+    padding: 0 16px;
+    .contact-container {
+      width: calc(var(--columnSize) * 8);
+      padding: 0;
+      margin: 0 auto 64px;
+      .contact-txt {
+        font-size: 1.6rem;
+        margin: 16px 0 0;
+        line-height: 1.8;
+      }
+      .mark-required,
+      .hs-form-required {
+        text-indent: -9999px;
+        color: $white;
+        position: relative;
+        padding: 0px;
+        margin: 0 8px;
+        width: 16px;
+        height: 16px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 8px;
+          height: 8px;
+          border-radius: 8px;
+          background: $type-color-required;
+        }
+      }
+      label {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .hs-form-field {
+        margin-bottom: 32px;
+      }
+      .hs-input {
+        width: 100%;
+        border: none;
+        background-color: #f4f4f6;
+        margin: 8px 0;
+        padding: 20px;
+        font-size: 1.5rem;
+        display: inline-block;
+        box-sizing: border-box;
+        outline: 0;
+        color: $black;
+        border-radius: 2px;
+        &::placeholder {
+          color: $secondary-lightgray;
+          letter-spacing: 0.1rem;
+        }
+      }
+      input[type="checkbox"] {
+        display: inline;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin: 0 8px 0 0;
+        transform: translateY(2px);
+      }
+      .hs-richtext {
+        width: 100%;
+        height: 160px;
+        overflow-y: scroll;
+        background-color: #f4f4f6;
+        padding: 16px 24px;
+        p {
+          font-size: 1.4rem;
+          color: $secondary-gray;
+          margin-bottom: 4px;
+        }
+      }
+      .hs-button {
+        margin: 32px auto;
+        color: $white;
+        font-family: $type-title2-en;
+        background-color: $black;
+        text-transform: uppercase;
+        border: 1px $black solid;
+        letter-spacing: 0.02rem;
+        display: block;
+        padding: 12px 84px 12px 84px;
+        border-radius: 32px;
+        transition: all 0.5s ease-out;
+        text-align: center;
+        font-size: 1.6rem;
+        letter-spacing: 0.1rem;
+        cursor: pointer;
+        &:hover {
+          text-decoration: none;
+          background-color: $secondary-gray;
+        }
+      }
+      .hs-error-msgs {
+        margin: 16px 0;
+        color: $type-color-required;
+        text-align: center;
+      }
+    }
+  }
+}
+// Tablet
+@media (max-width: 1024px) {
+  .contact-us {
+    .sec-container {
+      .contact-container {
+        input[type="checkbox"] {
+          width: 16px;
+          height: 16px;
+          margin: 0 8px 0 0;
+          transform: translateY(2px);
+          border: 1px solid #000;
+          padding: 0;
+        }
+        .hs-button {
+          width: 320px;
+          height: 54px;
+        }
+      }
+    }
+  }
+}
+
+// SP
+@media (max-width: 767px) {
+  .contact-us {
+    margin-top: 24px;
+    .sec-container {
+      padding: 0 16px;
+      .contact-container {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 64px;
+        .contact-txt {
+          font-size: 1.4rem;
+        }
+        label {
+          font-size: 1.4rem;
+        }
+        .hs-input {
+          margin: 8px 0;
+          padding: 16px;
+          font-size: 1.4rem;
+        }
+        input[type="checkbox"] {
+          width: 16px;
+          height: 16px;
+          margin: 0 8px 0 0;
+          transform: translateY(2px);
+          border: 1px solid #000;
+          padding: 0;
+        }
+        .hs-button {
+          font-size: 1.4rem;
+          width: 240px;
+          height: 54px;
+        }
+      }
+    }
+  }
+}

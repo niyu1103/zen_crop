@@ -1,0 +1,82 @@
+/* --------------------------- */
+/*
+ * Common Style
+ */
+
+div,
+header,
+footer,
+nav,
+main,
+section,
+ul,
+dl,
+p {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+li,
+ol,
+ul {
+  list-style: none;
+}
+
+dd,
+dl,
+dt {
+  margin: 0;
+  padding: 0;
+}
+
+table,
+tr,
+td,
+th {
+  box-sizing: border-box;
+}
+
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+section {
+  position: relative;
+}
+
+.content-container {
+  width: $container-width;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+// Tablet
+@media (max-width: 1024px) {
+  .content-container {
+    width: 100%;
+    padding: 0 16px;
+    margin: 64px 0;
+  }
+}
+
+// SP
+@media (max-width: 767px) {
+  .content-container {
+    width: 100%;
+    padding: 0 16px;
+    margin: 64px 0;
+  }
+}
+
+.txc {
+  text-align: center;
+}
+
+.txr {
+  text-align: right;
+}
+
+.display-none {
+  display: none;
+}

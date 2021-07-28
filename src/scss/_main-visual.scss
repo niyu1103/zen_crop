@@ -1,0 +1,249 @@
+/* ------------------------------------------------------ */
+/*
+ * Main Visual
+ */
+.home {
+  .main-visual {
+    width: 100%;
+    height: calc(100vh - 96px);
+    min-height: 860px;
+    margin: 64px 0 0 0;
+    position: relative;
+    /* IE対策に追加 */
+    @keyframes text {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px) translateY(-10px) scale(1.3);
+      }
+      100% {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .main-title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: calc(var(--gridSize) * 4);
+      height: 240px;
+      text-align: center;
+      color: $black;
+      h1.main-copy-sc-f {
+        margin-top: 40px;
+        font-family: $type-title2-en;
+        font-size: 6rem;
+        font-weight: 400;
+        transition: all 0.4s ease;
+        line-height: 1;
+        letter-spacing: 0rem;
+        color: $white;
+        transition: opacity 0.8s linear 0.2s, transform 0.5s cubic-bezier(0.2, 1, 0.2, 1) 0.1s;
+        span {
+          opacity: 0;
+          transition: all 0.2s 0s ease-in-out;
+          display: inline-block; /* これがないとspanは移動しない */
+          padding-right: 0.02rem;
+          &:nth-of-type(odd) {
+            transform: translateY(30px);
+          }
+          &:nth-of-type(even) {
+            transform: translateY(-30px);
+          }
+          @for $i from 1 through 30 {
+            &:nth-child(#{$i}) {
+              transition-delay: #{$i * 0.05}s;
+            }
+          }
+        }
+      }
+      h1.main-copy-sc-f.show {
+        span {
+          opacity: 1;
+          transform: translate3d(0px, 0px, 0px);
+        }
+      }
+      p.sc-f {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $white;
+      }
+    }
+    .area-video {
+      position: absolute;
+      z-index: -10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: calc(100vh - 96px);
+      min-height: 860px;
+      .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 3;
+      }
+      video {
+        width: 100%;
+        height: calc(100vh - 96px);
+        min-height: 860px;
+        object-fit: cover;
+      }
+    }
+  }
+  .home-main-scroll {
+    position: fixed;
+    z-index: 8;
+    bottom: 80px;
+    left: 32px;
+    width: 20px;
+    opacity: 0;
+    transition: all 0.7s 1s ease;
+    transform: translateY(-20px);
+    color: $bg-light-gray;
+    .home-main-scroll-container {
+      text-decoration: none;
+      height: 8rem;
+      width: 2rem;
+      transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      display: block;
+      .scroll-t {
+        font-family: $type-title2-en;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+        white-space: nowrap;
+        display: block;
+        transform: rotate(90deg);
+        font-size: 1.3rem;
+      }
+      .scroll-arw {
+        display: block;
+        width: 1px;
+        height: 40px;
+        position: absolute;
+        left: 50%;
+        margin-left: 0px;
+        bottom: 84px;
+        overflow: hidden;
+        background-color: $bg-light-gray;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 2px;
+          height: 100%;
+          background: $black;
+          animation: scroll-down 2.4s 1.4s ease-in-out infinite normal;
+        }
+      }
+    }
+  }
+  .home-main-scroll.show {
+    transform: translateY(-0);
+    opacity: 1;
+  }
+}
+
+.home.ie {
+  .main-visual {
+    background-size: cover;
+    .area-video {
+      background: url(../img/zenkigen_corpo_v01.jpg) center center no-repeat;
+      video {
+        display: none;
+      }
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 1024px) {
+  .home {
+    .main-visual {
+      width: 100%;
+      min-height: 640px;
+      height: 640px;
+      margin: 64px 0 0 0;
+      position: relative;
+      .main-title {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        margin: auto;
+        inset: 0;
+        width: calc(100% - 32px);
+        height: 240px;
+        text-align: center;
+        h1.main-copy-sc-f {
+          font-size: 3.2rem;
+        }
+        p.sc-f {
+          font-size: 1.3rem;
+        }
+      }
+      .area-video {
+        width: 100%;
+        height: 640px;
+        min-height: 640px;
+        overflow: hidden;
+        video {
+          overflow: hidden;
+          width: 100%;
+          height: 640px;
+          min-height: 640px;
+          object-fit: cover;
+        }
+      }
+    }
+    .home-main-scroll {
+      position: fixed;
+      bottom: calc(50% - 80px);
+    }
+  }
+}
+
+// SP
+@media (max-width: 767px) {
+  .home {
+    .main-visual {
+      width: 100%;
+      height: 400px;
+      min-height: 400px;
+      margin: 64px 0 0 0;
+      position: relative;
+      .main-title {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        margin: auto;
+        inset: 0;
+        width: calc(100% - 32px);
+        height: 240px;
+        h1.main-copy-sc-f {
+          margin-top: 128px;
+          font-size: 3.2rem;
+        }
+        p.sc-f {
+          font-size: 1.3rem;
+        }
+      }
+      .area-video {
+        width: 100%;
+        height: 400px;
+        min-height: 400px;
+        overflow: hidden;
+        video {
+          overflow: hidden;
+          width: 100%;
+          height: 400px;
+          min-height: 400px;
+          object-fit: cover;
+        }
+      }
+    }
+    .home-main-scroll {
+      display: none;
+    }
+  }
+}

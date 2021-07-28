@@ -1,0 +1,22 @@
+/* ------------------------------------------------------ */
+/*
+ * Import fonts
+ */
+
+@font-face {
+  font-family: "Akkurat-Bold";
+  src: url("../font/AkkuratPro-Bold.woff2") format("woff2"), url("../font/AkkuratPro-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Akkurat-Regular";
+  src: url("../font/AkkuratPro-Regular.woff2") format("woff2"), url("../font/AkkuratPro-Regular.woff") format("woff");
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+// Neue haas Grotesk
+@import url("https://use.typekit.net/wvp0njz.css");
+
+// Swiper
+@import url("https://unpkg.com/swiper/swiper-bundle.css");

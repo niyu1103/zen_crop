@@ -1,0 +1,160 @@
+/* 4 Animation --------------------*/
+.fade-in {
+  animation: fade-in 0.8s ease 0s 1 forwards normal;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    // display: block;
+  }
+}
+
+.fade-out {
+  animation: fade-out 0.8s ease 0s 1 forwards normal;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+    display: block;
+  }
+
+  70% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 0.5;
+    // background:  rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    opacity: 0.8;
+    // background:  rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    opacity: 0.5;
+    // background:  rgba(255, 255, 255, 0.7);
+  }
+}
+
+@keyframes backtop {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(100%);
+  }
+  10% {
+    transform: translateY(0%);
+  }
+  30% {
+    transform: translateY(0%);
+  }
+  40% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.td1 {
+  transition-delay: 0.25s;
+}
+
+.td2 {
+  transition-delay: 0.3s;
+}
+
+.td3 {
+  transition-delay: 0.35s;
+}
+
+.td4 {
+  transition-delay: 0.4s;
+}
+
+.td5 {
+  transition-delay: 0.45s;
+}
+
+.td6 {
+  transition-delay: 0.5s;
+}
+
+.td7 {
+  transition-delay: 0.55s;
+}
+
+.td8 {
+  transition-delay: 0.6s;
+}
+
+.ad1 {
+  animation-delay: 0.25s;
+}
+
+.ad2 {
+  animation-delay: 0.3s;
+}
+
+.ad3 {
+  animation-delay: 0.35s;
+}
+
+.ad4 {
+  animation-delay: 0.4s;
+}
+
+.ad5 {
+  animation-delay: 0.45s;
+}
+
+.ad6 {
+  animation-delay: 0.5s;
+}
+
+.ad7 {
+  animation-delay: 0.55s;
+}
+
+.ad8 {
+  animation-delay: 0.6s;
+}

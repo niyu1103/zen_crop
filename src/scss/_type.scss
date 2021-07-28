@@ -1,0 +1,93 @@
+/* --------------------------- */
+/*
+ * Import Fonts
+ */
+
+/* --------------------------- */
+/*
+ * Common Style
+ */
+html {
+  font-size: 62.5%;
+}
+
+/* 10px */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $type-family-main;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.8;
+  color: $type-color-main;
+  background-color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $type-title-jp;
+  font-weight: 700;
+  line-height: 1.4;
+  color: inherit;
+  letter-spacing: 0.05rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  // h2 {
+  // font-size: 1.6rem;
+  // }
+}
+
+p {
+  margin-top: 0;
+  font-family: $type-title-jp;
+  // font-family: $type-family-main;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+a {
+  color: $type-color-link;
+  text-decoration: underline;
+
+  &:visited {
+    color: $type-color-link;
+  }
+
+  &:hover {
+    color: $type-color-link;
+    text-decoration: underline;
+  }
+}
+
+.tac {
+  text-align: center;
+}
+.tal {
+  text-align: left;
+}
+.tar {
+  text-align: right;
+}
+.fwb {
+  font-weight: bold;
+  padding: 0 0.5rem;
+  letter-spacing: 0.05rem;
+}

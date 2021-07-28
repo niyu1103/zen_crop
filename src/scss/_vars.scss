@@ -1,0 +1,121 @@
+/* ------------------------------------------------------ */
+/*
+ * Global Variables
+ */
+
+$white: rgb(255, 255, 255) !default;
+$black: rgb(0, 0, 0) !default;
+$secondary-lightgray: #9a9a9a !default; //light gray
+$secondary-gray: #484848 !default; //gray
+$color-red: #ed225d;
+
+/* background color */
+$bg-dark-black: $black !default;
+$bg-dark-blue: #1e2128 !default;
+$bg-gray: #cdcdcd !default;
+$bg-light-gray: #eaeaea !default;
+$grid-line: #ededed !default;
+
+/* type color */
+$type-color-main: $black !default;
+$type-color-gray: #909090 !default;
+$type-color-link: $secondary-gray !default;
+$type-color-required: $color-red;
+
+/* SNS */
+$facebook: #3b5998 !default;
+$instagram: #8a3ab9 !default;
+$instagram-gradient: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+) !default;
+$twitter: #00aced !default;
+
+/* Type Family */
+$type-family-main: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+// $type-title-jp: "Noto Sans JP", sans-serif;
+$type-title-jp: 游ゴシック, "Yu Gothic", YuGothic, "Hiragino Sans", ヒラギノ角ゴシック, "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W1", "Hiragino Kaku Gothic ProN W1", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka,
+    sans-serif;
+$type-title-en: "Akkurat-Bold", sans-serif;
+$type-title2-en: "Akkurat-Regular", sans-serif;
+
+/* Margin */
+$m4: 4px;
+$m8: 8px;
+$m16: 16px;
+$m32: 32px;
+$m64: 64px;
+$m96: 96px;
+
+/* Content Width */
+$container-width: 1152px;
+// $container-width: calc(var(--gridSize) * 6);
+@media (max-width: 1024px) {
+    $container-width: 960px;
+}
+// @media (max-width: 768px) {
+//     $container-width: 720px;
+// }
+@media (max-width: 767px) {
+    $container-width: calc(100% - 32px);
+}
+
+/* Column */
+:root {
+    --columnSize: 96px;
+    // Tablet
+    @media (max-width: 1023px) {
+        --columnSize: 80px;
+    }
+    // SP
+    @media (max-width: 767px) {
+        --columnSize: 60px;
+    }
+}
+
+/* Grid */
+:root {
+    --cols: 8;
+    // Tablet
+    @media (max-width: 1023px) {
+        --cols: 8;
+    }
+    // SP
+    @media (max-width: 767px) {
+        --cols: 4;
+    }
+    // --totalGrid: calc(100vw);
+    --gridSize: calc(calc(100vw - 0px) / var(--cols));
+}
+
+/* IE for Gird */
+// $ie-grid-size: 128px;
+
+/* Grid */
+@mixin clothoid-linear-gradient($angle: to bottom, $color-start: #000000, $color-end: #ffffff, $start-point: 0) {
+    background-image: linear-gradient(
+        $angle,
+        $color-start 0 $start-point * 100%,
+        mix($color-end, $color-start, 70%) $start-point * 100% + (1 - $start-point) * 50%,
+        mix($color-end, $color-start, 85%) $start-point * 100% + (1 - $start-point) * 65%,
+        mix($color-end, $color-start, 92.5%) $start-point * 100% + (1 - $start-point) * 75.5%,
+        mix($color-end, $color-start, 96.3%) $start-point * 100% + (1 - $start-point) * 82.85%,
+        mix($color-end, $color-start, 98.1%) $start-point * 100% + (1 - $start-point) * 88%,
+        $color-end
+    );
+}
+
+/* Animaition */
+$scroll-fade-duration: 0.6s;
+$scroll-fade-delay: 0.2s;
+$scroll-fade-delay-plus1: 0.3s;
+$scroll-fade-delay-plus2: 0.4s;
+$hover-transition-easing: cubic-bezier(0.19, 1, 0.22, 1);
+$hover-transition: all 0.5s 0.02s cubic-bezier(0.19, 1, 0.22, 1);
+$transition-slow: all 1s 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+$custom-eading: cubic-bezier(0.19, 1, 0.22, 1);

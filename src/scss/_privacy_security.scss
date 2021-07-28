@@ -1,0 +1,277 @@
+/* ------------------------------------------------------ */
+/**
+*  Privacy Policy
+*/
+
+.privacy-policy {
+  .sec-container {
+    padding: 0 16px;
+    .privacy-container {
+      width: calc(var(--columnSize) * 12);
+      padding: 0;
+      margin-bottom: 64px;
+      .privacy-ttl {
+        font-size: 2.4rem;
+        margin-bottom: 16px;
+      }
+      .privacy-txt {
+        font-size: 1.6rem;
+        margin: 24px 0;
+        line-height: 1.8;
+      }
+      .privacy-ol {
+        margin: 24px 0;
+        padding-left: 2.2rem;
+        .privacy-decimal {
+          list-style: decimal;
+          margin-bottom: 16px;
+          ul {
+            padding-left: 2.2rem;
+
+            .privacy-disc {
+              list-style: disc;
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+      .ceo-sig {
+        margin: 24px 16px 0 0;
+        text-align: right;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      .corp-contact {
+        margin: 24px 16px 0 0;
+        text-align: left;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 1024px) {
+  .privacy-policy {
+    margin-top: 24px;
+    .sec-container {
+      padding: 0 16px;
+      .privacy-container {
+        width: 100%;
+        padding: 0;
+        .privacy-ttl {
+          font-size: 1.8rem;
+        }
+        .privacy-txt {
+          font-size: 1.4rem;
+        }
+        .privacy-ol {
+          font-size: 1.4rem;
+          .privacy-decimal {
+            margin-bottom: 16px;
+          }
+        }
+        .ceo-sig {
+          text-align: right;
+          p {
+            font-size: 1.4rem;
+          }
+        }
+        .corp-contact {
+          p {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SP
+@media (max-width: 767px) {
+  .privacy-policy {
+    margin-top: 24px;
+    .sec-container {
+      padding: 0 16px;
+      .privacy-container {
+        width: 100%;
+        padding: 0;
+        .privacy-ttl {
+          font-size: 1.8rem;
+        }
+        .privacy-txt {
+          font-size: 1.4rem;
+        }
+        .privacy-ol {
+          font-size: 1.4rem;
+          .privacy-decimal {
+            margin-bottom: 16px;
+          }
+        }
+        .ceo-sig {
+          text-align: right;
+          p {
+            font-size: 1.4rem;
+          }
+        }
+        .corp-contact {
+          p {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------ */
+/**
+*  Security Policy
+*/
+
+.security-policy {
+  .sec-container {
+    padding: 0 16px 32px;
+    .security-container {
+      width: calc(var(--columnSize) * 12);
+      padding: 0;
+      margin-bottom: 64px;
+      .security-ttl {
+        font-size: 2.4rem;
+        margin-bottom: 16px;
+      }
+      .security-txt {
+        font-size: 1.6rem;
+        margin: 24px 0;
+        line-height: 1.8;
+      }
+      .ceo-sig {
+        margin: 24px 16px 0 0;
+        text-align: right;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      .security-table {
+        width: 100%;
+        margin: 16px 0;
+        border: 1px solid $secondary-lightgray;
+        font-size: 1.5rem;
+        .security-talbe-row {
+          .security-table-key {
+            border: 1px solid $secondary-lightgray;
+            padding: 16px;
+            font-weight: bold;
+            text-align: left;
+          }
+          .security-table-value {
+            padding: 16px;
+            border: 1px solid $secondary-lightgray;
+          }
+          .security-table-value.txc {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      .security-ol {
+        margin: 8px 0;
+        padding-left: 2.2rem;
+        .security-decimal {
+          list-style: decimal;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 1024px) {
+  .security-policy {
+    margin-top: 24px;
+    .sec-container {
+      .security-container {
+        width: 100%;
+        padding: 0;
+        .security-ttl {
+          font-size: 1.8rem;
+        }
+        .security-txt {
+          font-size: 1.4rem;
+        }
+        .ceo-sig {
+          p {
+            font-size: 1.4rem;
+          }
+        }
+
+        .security-table {
+          width: 100%;
+          font-size: 1.4rem;
+          .security-talbe-row {
+            .security-table-key {
+              font-size: 1.4rem;
+              padding: 8px;
+            }
+            .security-table-value {
+              padding: 8px;
+            }
+            .security-table-value.txc {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        .security-ol {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+// SP
+@media (max-width: 767px) {
+  .security-policy {
+    margin-top: 24px;
+    .sec-container {
+      .security-container {
+        width: 100%;
+        padding: 0;
+        .security-ttl {
+          font-size: 1.8rem;
+        }
+        .security-txt {
+          font-size: 1.4rem;
+        }
+        .ceo-sig {
+          p {
+            font-size: 1.4rem;
+          }
+        }
+
+        .security-table {
+          width: 100%;
+          font-size: 1.4rem;
+          .security-talbe-row {
+            .security-table-key {
+              font-size: 1.4rem;
+              padding: 8px;
+            }
+            .security-table-value {
+              padding: 8px;
+            }
+            .security-table-value.txc {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        .security-ol {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
